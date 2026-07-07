@@ -63,13 +63,6 @@ export function DeveloperBanner() {
 
         <span className="text-purple-500/40">•</span>
 
-        <span className="flex items-center gap-1 text-slate-300">
-          <Users className="w-2.5 h-2.5 text-brand-neon" />
-          <span>{data.community.name}</span>
-        </span>
-
-        <span className="text-purple-500/40">•</span>
-
         <a
           href={data.community.discord}
           target="_blank"

@@ -1,0 +1,46 @@
+name: Laporan Bug / Masalah
+about: Laporkan bug atau masalah teknis pada landing page Vercy SMP
+title: '[BUG] '
+labels: bug, triage
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih telah melaporkan masalah! Silakan isi formulir di bawah ini dengan informasi yang jelas dan akurat.
+  - type: textarea
+    id: description
+    attributes:
+      label: Deskripsi Masalah
+      description: Berikan deskripsi yang jelas tentang bug atau masalah yang Anda temukan.
+      placeholder: Masalah terjadi saat saya mengklik...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Langkah-langkah Reproduksi
+      description: Bagaimana cara memicu bug ini kembali?
+      placeholder: |
+        1. Buka landing page
+        2. Klik tombol salin IP
+        3. Lihat konsol pengembang
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Perilaku yang Diharapkan
+      description: Apa yang seharusnya terjadi?
+      placeholder: Teks IP disalin dengan benar dan notifikasi muncul.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Lingkungan Pengujian
+      description: Browser, OS, atau perangkat yang digunakan saat masalah terjadi.
+      placeholder: Chrome v120 di Windows 11 / Mobile Safari di iOS 17
+    validations:
+      required: false

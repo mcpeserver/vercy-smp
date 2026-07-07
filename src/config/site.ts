@@ -15,9 +15,9 @@ export const SITE_CONFIG = {
 
   // Assets
   assets: {
-    logo: "/src/assets/images/vercy_smp_logo_1783402381777.jpg",
-    hero: "/src/assets/images/vercy_hero_image_1783402397207.jpg",
-    bg: "/src/assets/images/vercy_bg_image_1783402410903.jpg",
+    logo: "/src/assets/images/vercy_logo.jpg",
+    hero: "/src/assets/images/vercy_hero.jpg",
+    bg: "/src/assets/images/vercy_bg.jpg",
   },
 
   // Features

@@ -1,0 +1,43 @@
+name: Usulan Fitur Baru
+about: Berikan ide atau usulkan fitur baru untuk menyempurnakan landing page Vercy SMP
+title: '[FEATURE] '
+labels: enhancement, discussion
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Punya ide keren untuk Vercy SMP? Kami senang mendengarnya! Silakan jelaskan usulan Anda di bawah ini.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Apakah usulan Anda berhubungan dengan masalah atau kekurangan tertentu?
+      description: Jelaskan masalah atau keterbatasan yang mendasari usulan ini.
+      placeholder: Saat ini, sangat sulit untuk melihat...
+    validations:
+      required: false
+  - type: textarea
+    id: solution
+    attributes:
+      label: Deskripsi Fitur yang Diusulkan
+      description: Jelaskan bagaimana fitur ini bekerja dan apa nilai tambahnya bagi pengguna.
+      placeholder: Saya mengusulkan penambahan tab baru yang...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatif yang Dipertimbangkan
+      description: Apakah ada cara alternatif lain yang juga bisa menyelesaikan masalah ini?
+      placeholder: Kami bisa saja menampilkan informasi ini langsung di bagian kaki halaman...
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Informasi atau Konteks Tambahan
+      description: Tambahkan tangkapan layar (screenshot), mockup, atau referensi desain lain jika ada.
+      placeholder: Tempel gambar atau tulis referensi di sini...
+    validations:
+      required: false

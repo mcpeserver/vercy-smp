@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, MouseEvent } from "react";
 import { SITE_CONFIG } from "../config/site";
 import { Menu, X, Swords, Compass, Shield, Users, Radio, Mail, Play, AlertCircle } from "lucide-react";
 
@@ -27,7 +27,7 @@ export function Navbar() {
     { label: "Kontak", href: "#kontak", icon: Mail },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
     const element = document.querySelector(href);
@@ -67,9 +67,6 @@ export function Navbar() {
             <span className="font-display font-bold text-lg sm:text-xl text-white tracking-tight leading-tight flex items-center gap-1.5">
               {SITE_CONFIG.name}
               <span className="hidden sm:inline-block w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
-            </span>
-            <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-brand-glow font-medium leading-none">
-              Survival Economy
             </span>
           </div>
         </div>
