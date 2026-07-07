@@ -4,6 +4,20 @@ import { ExternalLink, MessageCircle, Phone, Globe, Users, Disc } from "lucide-r
 export function DeveloperBanner() {
   const { data, loading } = useDeveloperData();
 
+  const getWhatsAppUrl = (whatsapp: string) => {
+    if (!whatsapp) return "";
+    if (whatsapp.startsWith("http://") || whatsapp.startsWith("https://")) {
+      return whatsapp;
+    }
+    // Remove non-digits
+    let cleaned = whatsapp.replace(/\D/g, "");
+    // Replace leading 0 with 62
+    if (cleaned.startsWith("0")) {
+      cleaned = "62" + cleaned.slice(1);
+    }
+    return `https://wa.me/${cleaned}`;
+  };
+
   if (loading || !data) {
     return (
       <div id="dev-banner" className="h-9 w-full bg-brand-deep/80 backdrop-blur-md border-b border-white/5 flex items-center justify-center">
@@ -28,7 +42,7 @@ export function DeveloperBanner() {
         <span className="text-purple-500/40">•</span>
 
         <a
-          href={data.contact.whatsapp}
+          href={getWhatsAppUrl(data.contact.whatsapp)}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-1 px-1.5 py-0.5 rounded border border-purple-500/10 bg-purple-500/5 hover:border-brand-neon/40 hover:bg-brand-royal/40 hover:shadow-[0_0_8px_rgba(168,85,247,0.3)] text-purple-200 transition-all duration-200"

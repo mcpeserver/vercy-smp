@@ -13,11 +13,14 @@ import { Footer } from "./components/Footer";
 export default function App() {
   return (
     <div id="app-container" className="min-h-screen bg-brand-deep flex flex-col relative text-slate-200">
-      {/* Absolute top Developer Banner */}
-      <DeveloperBanner />
+      {/* Sticky Header Container */}
+      <header className="sticky top-0 z-50 w-full flex flex-col">
+        {/* Absolute top Developer Banner */}
+        <DeveloperBanner />
 
-      {/* Floating Header Navbar */}
-      <Navbar />
+        {/* Floating Header Navbar */}
+        <Navbar />
+      </header>
 
       {/* Main content body */}
       <main className="flex-grow w-full">

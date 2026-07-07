@@ -45,7 +45,7 @@ export function Navbar() {
   return (
     <nav
       id="main-navbar"
-      className={`sticky top-0 z-40 w-full transition-all duration-250 ease-in-out ${
+      className={`relative w-full transition-all duration-250 ease-in-out ${
         scrolled
           ? "h-16 bg-brand-deep/95 backdrop-blur-lg border-b border-purple-500/20 shadow-[0_10px_30px_rgba(5,2,10,0.8)]"
           : "h-20 bg-brand-deep/40 backdrop-blur-sm border-b border-purple-500/5 shadow-none"
@@ -114,8 +114,8 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       <div
-        className={`md:hidden fixed inset-x-0 bg-brand-deep/98 border-b border-purple-500/10 backdrop-blur-xl transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? "top-[72px] opacity-100 visible h-auto py-6" : "top-[-400px] opacity-0 invisible h-0 overflow-hidden"
+        className={`md:hidden absolute top-full inset-x-0 bg-brand-deep/98 border-b border-purple-500/10 backdrop-blur-xl transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? "opacity-100 visible h-auto py-6" : "opacity-0 invisible h-0 overflow-hidden"
         }`}
       >
         <div className="px-4 space-y-2">
